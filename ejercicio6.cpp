@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <limits>
-#include "./funciones/auxEj1.cpp"
+#include "funciones/auxEj6.cpp"
 
 
 int main(){

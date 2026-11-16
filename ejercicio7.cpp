@@ -2,20 +2,8 @@
 #include <string>
 #include <iostream>
 #include <limits>
+#include "funciones/auxEj7.cpp"
 
-long long comparo(long long* llegada, long long* aux, int posI, int posF){
-    
-    if (posI >= posF) return 0;
-    
-    long long mitad= (posI+posF)/2;
-
-    int izq = comparo (llegada, aux, posI, mitad);
-    int der = comparo (llegada, aux, mitad+1, posF);
-
-
-
-
-}
 
 
 int main(){
@@ -36,7 +24,7 @@ int main(){
 
     cantRemontadasE = comparo(llegada, aux, izq, der);
 
-
+    std::cout << cantRemontadasE <<std::endl;
 
     
 
