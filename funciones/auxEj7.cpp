@@ -1,7 +1,9 @@
-void mergeComparo(long long* llegada, long long* aux, long long mitad, long long posI, long long posF){ 
-    long long i = posI;
-    long long j = mitad + 1;
-    long long k = posI;
+#include <cstdint>
+
+void mergeComparo(int64_t* llegada, int64_t* aux, int64_t mitad, int64_t posI, int64_t posF){ 
+    int64_t i = posI;
+    int64_t j = mitad + 1;
+    int64_t k = posI;
 
     while (i <= mitad && j <= posF) {
         if (llegada[i] < llegada[j]) {
@@ -34,16 +36,16 @@ void mergeComparo(long long* llegada, long long* aux, long long mitad, long long
 }
 
 
-long long comparo(long long* llegada, long long* aux, long long posI, long long posF){
+int64_t comparo(int64_t* llegada, int64_t* aux, int64_t posI, int64_t posF){
     
     if (posI >= posF) return 0;
     
-    long long mitad= (posI+posF)/2;
+    int64_t mitad= (posI+posF)/2;
 
-    long long izq = comparo (llegada, aux, posI, mitad);
-    long long der = comparo (llegada, aux, mitad+1, posF);
+    int64_t izq = comparo (llegada, aux, posI, mitad);
+    int64_t der = comparo (llegada, aux, mitad+1, posF);
 
-    long long cruzados = 0;
+    int64_t cruzados = 0;
     int j = mitad + 1;
 
     for (int i = posI; i <= mitad; i++) {
