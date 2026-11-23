@@ -5,7 +5,6 @@
 #include "./funciones/auxEj9.cpp"
 
 
-
 int main(){
 
     int k;

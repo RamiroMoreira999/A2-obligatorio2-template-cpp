@@ -7,6 +7,7 @@ int memoMaxLikes(int* tiros, int* likes, int k, bool bailo, int numRonda, int ve
     if (memo[numRonda][ventaja][bailo] != -1) return memo[numRonda][ventaja][bailo];
 
     int ventajaOriginal = ventaja;
+    
     ventaja += tiros[numRonda];
 
     int noBailar = memoMaxLikes(tiros, likes, k, false, numRonda + 1, ventaja, memo);
