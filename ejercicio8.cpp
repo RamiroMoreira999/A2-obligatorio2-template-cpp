@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <limits>
-#include "auxEj8.cpp"
+#include "funciones/auxEj8.cpp"
 
 int main(){
     
@@ -31,6 +31,9 @@ int main(){
     std::cout << resultado << std::endl;
 
    
-    // TODO
+    delete[] maxPorCategoria;
+    delete[] pesos;
+    delete[] satisfacciones;
+    delete[] categorias;
     return 0;
 }

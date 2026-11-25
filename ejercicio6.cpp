@@ -38,14 +38,13 @@ int main(){
     }
     if (izq==der) ret[izq] = cartelMax(placas, max);
 
-    for(int i=0; i < largoPlaca; i++){
+        for(int i=0; i < largoPlaca; i++){
         std::cout << ret[i];
-
         if(i < largoPlaca - 1) std::cout << " ";
     }
+    std::cout << std::endl;
 
-    
-
-    // TODO
+    delete[] placas;
+    delete[] ret;
     return 0;
 }

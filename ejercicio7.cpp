@@ -10,7 +10,7 @@ int main(){
     int64_t cantRemontadasE=0;
     int64_t  n;
     std:: cin >> n;
-    int64_t * llegada = new long long [n]();
+    int64_t * llegada = new int64_t[n]();
     for(int i=0; i<n; i++){
         int64_t corredor;
         std:: cin >> corredor;
@@ -20,7 +20,7 @@ int main(){
     int64_t  izq=0;
     int64_t der=n-1;
 
-    int64_t * aux = new long long[n]();
+    int64_t * aux = new int64_t[n]();
 
     cantRemontadasE = comparo(llegada, aux, izq, der);
 
@@ -28,6 +28,7 @@ int main(){
 
     
 
-    // TODO
+    delete[] llegada;
+    delete[] aux;
     return 0;
 }

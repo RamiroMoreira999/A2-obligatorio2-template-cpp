@@ -26,9 +26,10 @@ int main(){
 
     int res = maxLikes(tiros, likes, k, bailo, numRonda, ventaja);
 
-    std:: cout << res;
+    std::cout << res << std::endl;
 
 
-    // TODO
+    delete[] tiros;
+    delete[] likes;
     return 0;
 }
