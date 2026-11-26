@@ -40,3 +40,19 @@ Para implementarlo, utilizamos una tabla de seis dimensiones, donde guardamos la
 - Hoy hicimos el ejercicio 9. La verdad es que al principio, cuando leímos la letra, no habíamos entendido casi nada, pero después de pedirle a nuestro buen amigo gepeto que nos la explicara, el ejercicio nos resultó bastante más fácil. 
 Para resolverlo, usamos la misma estructura que veníamos trabajando en clase para los ejercicios de memoización: una función que inicializa el memo y otra que hace la recursión. La idea fue pensar qué pasaba si el arquero bailaba o no en cada ronda y quedarnos con la opción que diera más likes, teniendo en cuenta la ventaja que llevábamos y si había bailado en la ronda anterior.
 Una cosa que no sabíamos era cómo pasar nuestro memo de tres dimensiones como parámetro a la otra función auxiliar. Entonces, le preguntamos a ChatGPT, que nos explicó cómo hacerlo y además nos recomendó usar static para evitar posibles problemas de memoria por el tamaño de la matriz.
+
+## 2026-11-24 - En conjunto
+- Revisamos el repo con Claude. Compilando con el comando de la letra en Linux
+  aparecieron dos errores que en Mac no se veían: en el ejercicio 7 asignábamos
+  `new long long[]` a un `int64_t*` y en el ejercicio 8 el include no tenía la carpeta
+  `funciones/`. Los corregimos. Completamos autoria.md (no habíamos declarado el uso de
+  IA) y justificacion.md.
+- Ejercicio 10: le pedimos a Claude la forma más fácil de entender de resolverlo con
+  backtracking. Comparamos tres opciones (verificar todo al final, letra por letra
+  verificando columnas, y columna por columna) y elegimos la del medio: casi tan simple
+  como probar todo, pero con podas. Claude generó el código; le pedimos que usara int64_t
+  como en el ejercicio 7 y solo lo visto en el curso, y lo probamos con los ejemplos.
+
+## 2026-11-26 - En conjunto
+- Revisión final: compilamos los 5 ejercicios con el comando de la letra y probamos los
+  ejemplos. Completamos la documentación y armamos el zip.

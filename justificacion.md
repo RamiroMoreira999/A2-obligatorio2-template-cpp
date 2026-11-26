@@ -37,5 +37,14 @@
   O(K²). Espacio: el memo de O(K²) más la pila de recursión de profundidad K.
 
 ## Ejercicio 10
-- Sin restricciones de órdenes. / Justificación: ...
-
+- Sin restricciones de órdenes (la letra solo pide backtracking con podas).
+- Justificación: backtracking que asigna un dígito a cada letra distinta (a lo sumo 10),
+  así que en el peor caso es exponencial (como mucho 10! asignaciones). Podas:
+  1. letras distintas usan dígitos distintos (`usado`);
+  2. la primera letra de una palabra de más de una letra no puede ser 0 (`noCero`);
+  3. después de cada asignación se verifican las columnas completas desde las unidades
+     con el acarreo, y si una no cierra se corta esa rama (`columnasOk`);
+  4. si un sumando es más largo que el resultado, el acertijo es imposible sin buscar.
+  Las letras se asignan de derecha a izquierda para que las columnas de las unidades se
+  completen primero y la poda 3 actúe lo antes posible. No se corta en la primera
+  solución: se recorren todas y se guarda la menor según el orden de la letra.

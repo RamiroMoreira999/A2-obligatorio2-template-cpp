@@ -48,5 +48,11 @@
 
 
 ## Ejercicio 10
-- Implementación íntegramente propia, sin fuentes externas.
+- El enfoque (asignar dígitos letra por letra, ordenando las letras de derecha a
+  izquierda, y verificar en cada paso las columnas completas de la suma con el acarreo)
+  lo discutimos con Claude (Anthropic).
+- El código (`auxEj10.cpp`) fue generado con Claude a partir de ese enfoque; lo
+  adaptamos para usar solo lo visto en el curso (int64_t, sin break/continue), lo
+  revisamos y lo probamos con los casos de la letra (ver entrada del 2026-11-24 en la
+  bitácora).
 
